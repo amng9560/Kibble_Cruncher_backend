@@ -7,6 +7,7 @@ class AuthenticateUser
     end
   
     def call
+      byebug
       JsonWebToken.encode(user_id: user.id) if user
     end
   
