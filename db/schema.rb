@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_01_052150) do
+ActiveRecord::Schema.define(version: 2019_11_21_213537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2019_12_01_052150) do
   end
 
   create_table "pet_foods", force: :cascade do |t|
-    t.integer "pet_id", null: false
-    t.integer "food_id", null: false
+    t.bigint "pet_id", null: false
+    t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["food_id"], name: "index_pet_foods_on_food_id"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2019_12_01_052150) do
     t.string "name"
     t.string "breed"
     t.date "birth_date"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "animaltype"
