@@ -6,4 +6,9 @@ class User < ApplicationRecord
     validates :password, presence: true
     validates :firstname, presence: true
     validates :lastname, presence: true
+
+    # login = {
+    #     username: ENV["APP_USERNAME"]
+    #     password: ENV["APP_PASSWORD"]
+    # }
 end
